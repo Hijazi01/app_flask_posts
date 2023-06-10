@@ -1,0 +1,42 @@
+{%extends './layout.html'%}
+ {%block body %}
+<div class="container-fluid">
+        <div class="card">
+          <div class="card-body text-center">
+               <a href="{{url_for('post.create')}}" class=" font-weight-bold ">
+              <img src="{{url_for('static',filename='images/icon/add.png')}}" alt="" width="45"  class="text-center " >
+               </a>
+          </div>
+        </div>
+</div>
+
+<div class="container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold mb-4">{{post['title']}}</h5>
+            <p class="mb-0">{{post['body']}}</p>
+          </div>
+            <div class="row justify-content-center">
+                  <div class="col-4 p-2 text-denger btn ">
+                      <a href="{{url_for('post.show',id=post.id)}}" class=" font-weight-bold ">
+                    <img src="{{url_for('static',filename='images/icon/display.png')}}" alt="" width="35" height="35" class="rounded-circle">
+                        Display
+                </a>
+                </div>
+                <div class="col-4 p-2 btn  " >
+                      <a href="{{url_for('post.show',id=post.id)}}" class=" font-weight-bold ">
+                        <img src="{{url_for('static',filename='images/icon/refresh.png')}}" alt="" width="35" height="35" class="rounded-circle">
+                    Update
+                    </a>
+                </div>
+                <div class="col-4 p-2 text-denger btn ">
+                      <a href="{{url_for('post.delete',id=post.id)}}" class=" font-weight-bold "><a href="#" class=" font-weight-bold ">
+                    <img src="{{url_for('static',filename='images/icon/bin.png')}}" alt="" width="35" height="35" class="rounded-circle">
+                        Delete
+                </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ {%endblock%}

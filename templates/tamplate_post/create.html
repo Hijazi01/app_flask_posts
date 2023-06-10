@@ -1,0 +1,33 @@
+{%extends './layout.html'%}
+ {%block body %}
+        <div class="card">
+          <div class="card-body text-center">
+               <a href="#" class=" font-weight-bold ">
+              <img src="{{url_for('static',filename='images/icon/add.png')}}" alt="" width="35"  class="text-center " >
+               </a>
+          </div>
+
+</div>
+<div class="container">
+        <div class="card">
+          <div class="card-body ">
+      <h5 class="card-title fw-semibold  ">Add Post</h5>
+              <div class="card">
+                <div class="card-body text-center">
+                  <form method="post">
+                    <div class="mb-2">
+                      <label for="exampleInputEmail1" class="form-label">TiTle Post</label>
+                      <input type="text" name="title"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label   class="form-label">body of post</label>
+                      <input name="body" type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">add</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+ {%endblock%}
